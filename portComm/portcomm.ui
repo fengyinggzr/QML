@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>portComm</class>
+ <widget class="QMainWindow" name="portComm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>533</width>
+    <height>455</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>串口调试</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>270</y>
+      <width>501</width>
+      <height>161</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelMsgRecv">
+    <property name="geometry">
+     <rect>
+      <x>22</x>
+      <y>233</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>接收到的数据：</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frameTime">
+    <property name="geometry">
+     <rect>
+      <x>226</x>
+      <y>194</y>
+      <width>291</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButtonTime">
+     <property name="geometry">
+      <rect>
+       <x>204</x>
+       <y>20</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>设置</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>26</y>
+       <width>54</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>时钟：</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditTime">
+     <property name="geometry">
+      <rect>
+       <x>76</x>
+       <y>23</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frameIPort">
+    <property name="geometry">
+     <rect>
+      <x>225</x>
+      <y>94</y>
+      <width>291</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButtonIPort">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>60</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>设置</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>17</x>
+       <y>37</y>
+       <width>54</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>端口号：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>17</x>
+       <y>8</y>
+       <width>54</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>IP：</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditPort">
+     <property name="geometry">
+      <rect>
+       <x>79</x>
+       <y>33</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditIP1">
+     <property name="geometry">
+      <rect>
+       <x>79</x>
+       <y>3</y>
+       <width>31</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditIP2">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>3</y>
+       <width>31</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditIP3">
+     <property name="geometry">
+      <rect>
+       <x>172</x>
+       <y>3</y>
+       <width>31</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditIP4">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>3</y>
+       <width>31</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>116</x>
+       <y>7</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>.</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>163</x>
+       <y>7</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>.</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>211</x>
+       <y>7</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>.</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonIPortQuery">
+     <property name="geometry">
+      <rect>
+       <x>206</x>
+       <y>59</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>查询</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frameAddr">
+    <property name="geometry">
+     <rect>
+      <x>226</x>
+      <y>4</y>
+      <width>291</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButtonAddr">
+     <property name="geometry">
+      <rect>
+       <x>206</x>
+       <y>13</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>设置</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>14</x>
+       <y>19</y>
+       <width>54</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>地址码：</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditAddr">
+     <property name="geometry">
+      <rect>
+       <x>77</x>
+       <y>15</y>
+       <width>113</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonAddrQuery">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>43</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>查询</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frameSettings">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>4</y>
+      <width>191</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QComboBox" name="comboBoxParity">
+     <property name="geometry">
+      <rect>
+       <x>112</x>
+       <y>137</y>
+       <width>69</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>无</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>奇</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>偶</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBoxSerial">
+     <property name="geometry">
+      <rect>
+       <x>112</x>
+       <y>18</y>
+       <width>69</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>com1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>com2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>com3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>com4</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>22</x>
+       <y>102</y>
+       <width>54</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>数据位：</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxStopBits">
+     <property name="geometry">
+      <rect>
+       <x>112</x>
+       <y>177</y>
+       <width>69</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>22</x>
+       <y>142</y>
+       <width>54</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>校验位：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>22</x>
+       <y>23</y>
+       <width>54</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>串口：</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxBaudRate">
+     <property name="geometry">
+      <rect>
+       <x>112</x>
+       <y>57</y>
+       <width>69</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>9600</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>19200</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBoxDataBits">
+     <property name="geometry">
+      <rect>
+       <x>112</x>
+       <y>97</y>
+       <width>69</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>22</x>
+       <y>183</y>
+       <width>54</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>停止位：</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>22</x>
+       <y>61</y>
+       <width>54</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>波特率：</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>230</y>
+      <width>69</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开串口</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
